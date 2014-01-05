@@ -57,12 +57,12 @@ namespace CardGame
 
         public Card nextCard()
         {
-            
+
             Debug.Assert(this.nextCardToDealIndex < 52);
 
-            return cards[this.nextCardToDealIndex];
-
             this.nextCardToDealIndex++;
+
+            return cards[this.nextCardToDealIndex];
         }
     }
 }

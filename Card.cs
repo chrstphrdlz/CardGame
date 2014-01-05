@@ -8,7 +8,7 @@ namespace CardGame
 {
     enum CardValue
     {
-        Two=2,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King,Ace
+        Nothing=0,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King,Ace
     }
 
     enum Suit
@@ -18,9 +18,9 @@ namespace CardGame
 
     class Card : IComparable 
     {
-        CardValue cardType;
+        public CardValue cardType { get; private set; }
 
-        Suit cardSuit;
+        public Suit cardSuit { get; private set; }
 
         public Card(CardValue cardVal, Suit cardSuit)
         {
